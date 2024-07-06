@@ -1,48 +1,47 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
 
 void main() {
-    setlocale(LC_ALL, "");
 
-    float valor1, valor2;
-    int opcao;
+    float value1, value2;
+    int option;
 
-    while(opcao < 1 || opcao > 4){
-    printf("Digite o valor 1: ");
-    scanf("%f", &valor1);
-    printf("Digite o valor 2: ");
-    scanf("%f", &valor2);
+    while(option < 1 || option > 4){
+    printf("Enter the value 1: ");
+    scanf("%f", &value1);
+    printf("Enter the value 2: ");
+    scanf("%f", &value2);
 
-    printf("\n\nDigite:");
-    printf("\n1 - Para Somar");
-    printf("\n2 - Para Subtrair");
-    printf("\n3 - Para Multiplicar");
-    printf("\n4 - Para Dividir\n");
-    scanf("%d", &opcao);
+    printf("\n\nPress:");
+    printf("\n1 - Sum");
+    printf("\n2 - Subtract");
+    printf("\n3 - Multiply");
+    printf("\n4 - Divide\n");
+    scanf("%d", &option);
 
-    switch (opcao) {
+    switch (option) {
         case 1:
-            printf("\nA soma é = %.2f", valor1 + valor2);
+            printf("\nThe sum is = %.2f", value1 + value2);
             break;
         case 2:
-            printf("\nA subtração é = %.2f", valor1 - valor2);
+            printf("\nThe subtraction is = %.2f", value1 - value2);
             break;
         case 3:
-            printf("\nA multiplicação é = %.2f", valor1 * valor2);
+            printf("\nThe multiplication = %.2f", value1 * value2);
             break;
         case 4:
-            if (valor2 == 0) {
-                printf("Erro: divisão por zero não permitida.");
+            if (value2 == 0) {
+                printf("Error: division by zero not allowed.");
             } else {
-                printf("\nA divisão é = %.2f", valor1 / valor2);
+                printf("\nThe division is = %.2f", value1 / value2);
             }
             break;
         default:
-            printf("Opção inválida\n\n");
+            printf("Invalid\n\n");
             break;
 }
     }
    printf("\n\n");
-   system("pause");
+   system ("pause");
 }
+
